@@ -1,25 +1,59 @@
-import logo from './logo.svg';
-import './App.css';
+import { Slideshow, Slide, SlideText } from './components/Slideshow'
 
-function App() {
+import './styles/styles.css';
+
+import img1 from './assets/img/1.jpg';
+import img2 from './assets/img/2.jpg';
+import img3 from './assets/img/3.jpg';
+import img4 from './assets/img/4.jpg';
+
+
+const App = () => {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+   <main>
+      <Slideshow>
+        <Slide>
+          <a href="https://www.google.com">
+            <img src={img1} alt="" />
+          </a>
+          <SlideText backgroundColor="" textColor="white">
+            <p>10% de descuento en electronica</p>
+          </SlideText>
+        </Slide>
+
+        <Slide>
+          <a href="https://www.google.com">
+            <img src={img2} alt="" />
+          </a>
+          <SlideText backgroundColor="" textColor="white">
+            <p>15% de descuento</p>
+          </SlideText>
+        </Slide>
+
+        <Slide>
+          <a href="https://www.google.com">
+            <img src={img3} alt="" />
+          </a>
+          <SlideText backgroundColor="" textColor="white">
+            <p>15% de descuento</p>
+          </SlideText>
+        </Slide>
+
+        <Slide>
+          <a href="https://www.google.com">
+            <img src={img4} alt="" />
+          </a>
+          <SlideText backgroundColor="" textColor="white">
+            <p>15% de descuento</p>
+          </SlideText>
+        </Slide>
+
+      </Slideshow>
+
+   </main>
+
+  )
 }
 
 export default App;
